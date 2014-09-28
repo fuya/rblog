@@ -1,0 +1,15 @@
+h1 posts
+
+table
+
+  tbody
+
+    th Title
+    th Body
+
+    - @posts.each do |post|
+      tr
+        td.title
+          = link_to post.title, post
+        td.body
+          = truncate post.body, :length=> 10
