@@ -1,9 +1,22 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  body: MyString
+simple:
+  id: 1
+  title: Title01
+  body: Hello world!
 
-two:
-  title: MyString
-  body: MyString
+markdown:
+  id: 2
+  title: Title02
+  body: |
+    HEAD1
+    =====
+
+    HEAD2
+    -----
+
+    - List1
+    - List2
+      - List2.1
+
+      puts 'sample code'
