@@ -5,3 +5,26 @@ p
   = @post.body
 
 = link_to 'Back', posts_path
+
+h1 Comments
+
+- @post.comments.each do |comment|
+  dl
+    dt
+      = comment.commenter
+    dd
+      = comment.body
+
+h1 AddComment
+
+= form_for [@post, @post.comments.build] do |f|
+  p
+    = f.label :commenter
+    = f.text_field :commenter
+
+  p
+    = f.label :body
+    = f.text_field :body
+
+  p
+    = f.submit
