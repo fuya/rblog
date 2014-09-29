@@ -41,3 +41,6 @@ gem 'slim-rails'
 # gem 'debugger', group: [:development, :test]
 
 gem 'redcarpet'
+
+#paging
+gem 'kaminari'
