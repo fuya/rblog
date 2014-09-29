@@ -1,0 +1,31 @@
+ja:
+  views:
+    navigation:
+      back: "戻る"
+      edit: "編集"
+      create: "新規作成"
+    pagination:
+      first: "最初"
+      previous: "« 前ページ"
+      next: "次ページ »"
+      last: "最後"
+      truncate: "..."
+    menu:
+      index: "Index"
+      new: "新規"
+
+
+  activerecord:
+    models:
+      post: "投稿"
+      comment: "コメント"
+    attributes:
+      post:
+        title: "タイトル"
+        body: "本文"
+      comment:
+        commenter: "投稿者"
+        body: "メッセージ"
+    errors:
+      messages:
+        blank: "が入力されていません"

@@ -1,3 +1,5 @@
+= link_to t('views.navigation.back'), :back
+
 section.post
 
   header
@@ -14,14 +16,14 @@ section.post
 
   aside.comments
 
-    h2.aside-title Comments
+    h2.aside-title
+      = t('activerecord.models.comment')
 
     .comments
       = render @post.comments
 
 
-    h2.aside-title Add Comment
     = render "comments/form"
 
     div
-      = link_to 'Edit', edit_post_path(@post.id)
+      = link_to t('views.navigation.edit'), edit_post_path(@post.id)
