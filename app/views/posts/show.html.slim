@@ -1,19 +1,14 @@
-p
-  = @post.title
+section.post
+  h1.post-title
+    = @post.title
 
-p
-  = markdown @post.body
+  div.post-body
+    = markdown @post.body
 
-= link_to 'Back', posts_path
 
-h1 Comments
+  footer.comments
 
-- @post.comments.each do |comment|
-  dl
-    dt
-      = comment.commenter
-    dd
-      = comment.body
+    h2 Comments
 
     dl
       = render @post.comments
