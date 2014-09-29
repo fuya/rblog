@@ -12,14 +12,26 @@ html
   body
 
     header.global-header
-      h1.site-title
-        = link_to "RBlog", :posts
+      .inner
+        h1.site-title
+          = link_to "RBlog", :posts
+
+
+    nav.global-nav
+      .inner
+        ul
+          li
+            = link_to 'Index', posts_path
+          li
+            = link_to 'New', '/posts/new'
 
  
-    div.main
-      == yield
+    .main
+      .inner
+        == yield
 
 
     footer.global-footer
-      small.copyright Copyright &copy; 2014 Fuya.
+      .inner
+        small.copyright Copyright &copy; 2014 Fuya.
 

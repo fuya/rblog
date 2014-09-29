@@ -1,0 +1,113 @@
+$base1-color: #86c0f7;
+$base1-accent: #8e65ba;
+$base2-color: #374f66;
+$base2-accent: #cc1470;
+$link-color: #333399;
+$accent1-color: #bd86f7;
+$accent2-color: #f786c0;
+$accent3-color: #f7bd86;
+$accent4-color: #c0f786;
+$accent5-color: #86f7bd;
+
+
+body, header, article, section, footer, div,
+h1, h2, h3, h4, h5, h6,
+ul, li{
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+li{
+  list-style-type: none;
+}
+
+body{
+  color: #3a3a3a;
+}
+
+a{
+  &:link{
+    color: $link-color;
+    text-decoration: none;
+  }
+  &:visited{
+    color: $link-color;
+  }
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+.global-header{
+  margin: 0 auto;
+  padding: 10px 0;
+  background: $base1-color;
+}
+
+.global-nav{
+  margin: 0 auto;
+  background: $base2-color;
+  box-shadow: 0 .15em .15em 0 $base2-color;
+  overflow: hidden;
+
+  li{
+    float: left;
+    display: block;
+
+    &:hover{
+      background: $base1-accent;
+    }
+
+    a{
+      display: block;
+      padding: 10px;
+
+      &:link, &:visited{
+        color: $base2-accent;
+      }
+
+    }
+  }
+
+}
+
+.main{
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.global-footer{
+  margin-top: 30px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.inner{
+  width: 940px;
+  margin: auto;
+}
+
+
+.btn{
+  background: $accent3-color;
+  border: 1px solid darken($accent3-color, 30%);
+  padding: 10px;
+
+  &:hover{
+    cursor: pointer;
+    Background: lighten($accent3-color, 5%);
+  }
+}
+
+
+.form-title{
+  width: 500px;
+}
+
+.form-textarea{
+  width: 500px;
+  height: 100px;
+
+}

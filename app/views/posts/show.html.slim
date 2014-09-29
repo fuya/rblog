@@ -1,20 +1,27 @@
 section.post
-  h1.post-title
-    = @post.title
+
+  header
+    h1.post-title
+      = @post.title
+
+    time
+      = @post.created_at.strftime("%Y-%m-%d %H:%M:%S")
+
 
   div.post-body
     = markdown @post.body
 
 
-  footer.comments
+  aside.comments
 
-    h2 Comments
+    h2.aside-title Comments
 
-    dl
+    .comments
       = render @post.comments
 
 
-    h2 Add Comment
+    h2.aside-title Add Comment
     = render "comments/form"
 
-= link_to 'Index', posts_path
+    div
+      = link_to 'Edit', edit_post_path(@post.id)

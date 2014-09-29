@@ -1,7 +1,10 @@
-h2 posts
+section.index
 
-= page_entries_info(@posts)
-= paginate(@posts)
+header
+
+  = page_entries_info(@posts)
+  = paginate(@posts)
+
 
 dl.post-list
     - @posts.each do |post|
@@ -11,5 +14,6 @@ dl.post-list
         div.list-body
           = truncate post.body, :length=> 10
 
+footer
 
-= paginate(@posts)
+  = paginate(@posts)
