@@ -11,5 +11,15 @@ html
 
   body
 
-    == yield
+    header.global-header
+      h1.site-title
+        = link_to "RBlog", :posts
+
+ 
+    div.main
+      == yield
+
+
+    footer.global-footer
+      small.copyright Copyright &copy; 2014 Fuya.
 
