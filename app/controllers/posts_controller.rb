@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+http_basic_authenticate_with name: Settings.admin.user, password: Settings.admin.password, except: [:index, :show]
+
   def new
     @post = Post.new
   end
