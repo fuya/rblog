@@ -44,3 +44,7 @@ gem 'redcarpet'
 
 #paging
 gem 'kaminari'
+
+#setting
+gem 'settingslogic'
+

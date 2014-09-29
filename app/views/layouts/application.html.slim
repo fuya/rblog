@@ -3,7 +3,7 @@ html
   head
     meta charset="utf-8"
 
-    title == content_for?(:title) ? yield(:title) : "RBlog"
+    title == content_for?(:title) ? yield(:title) : Settings.blog.title
 
     = stylesheet_link_tag    'application'
     = javascript_include_tag 'application'
@@ -14,7 +14,7 @@ html
     header.global-header
       .inner
         h1.site-title
-          = link_to "RBlog", :posts
+          = link_to Settings.blog.title, :posts
 
 
     nav.global-nav
