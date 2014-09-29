@@ -1,0 +1,15 @@
+default: &defaults
+  blog:
+    title: "RoR Blog"
+  admin:
+    user: "admin"
+    password: "password" #恐ろしの直書き
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
