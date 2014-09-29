@@ -15,16 +15,11 @@ h1 Comments
     dd
       = comment.body
 
-h1 AddComment
+    dl
+      = render @post.comments
 
-= form_for [@post, @post.comments.build] do |f|
-  p
-    = f.label :commenter
-    = f.text_field :commenter
 
-  p
-    = f.label :body
-    = f.text_field :body
+    h2 Add Comment
+    = render "comments/form"
 
-  p
-    = f.submit
+= link_to 'Index', posts_path
