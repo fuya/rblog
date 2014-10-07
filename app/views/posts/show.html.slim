@@ -7,8 +7,7 @@ section.post
       = @post.title
 
     time
-      = @post.created_at.strftime("%Y-%m-%d %H:%M:%S")
-
+      = I18n.l(@post.created_at)
 
   div.post-body
     = markdown @post.body
