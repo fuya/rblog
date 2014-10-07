@@ -4,6 +4,8 @@ default: &defaults
   admin:
     user: "admin"
     password: "password" #恐ろしの直書き
+  paginate:
+    per_page: 10
 
 development:
   <<: *defaults

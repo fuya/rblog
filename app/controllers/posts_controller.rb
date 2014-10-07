@@ -42,7 +42,7 @@ http_basic_authenticate_with name: Settings.admin.user, password: Settings.admin
   end
 
   def index
-    @posts = Post.page(params[:page]).per(10).order(:id)
+    @posts = Post.page(params[:page]).per(Settings.paginate.per_page).order(:id)
   end
 
   private 
